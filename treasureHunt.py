@@ -23,19 +23,20 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
-decisionOne = str(input("Which direction do you choose? Left or Right.\n"))
-if decisionOne in ["right", "Right"]:
+decisionOne = input("Which direction do you choose? Left or Right.\n").lower()
+if decisionOne == "right":
     print("You've activated a trap and spikes end your hunt early.")
-elif decisionOne in ["Left", "left"]:
-    decisionTwo = input("Swim or wait?\n")
-    if decisionTwo in ["Swim", "swim"]:
+elif decisionOne == "left":
+    print('You\'ve come to a large lake. What do you do?')
+    decisionTwo = input("Swim or wait?\n").lower()
+    if decisionTwo == "swim":
         print("You were suddenyly swarmed by Aligators and are torn to pieces.")
-    elif decisionTwo in ["wait", "Wait"]:
+    elif decisionTwo == "wait":
         print("Wise decision. A boat comes for you and carries you safely across.")
-        finalDecision = input("Which door to choose: Red, Blue or Yellow?\n")
-        if finalDecision in ["Red", "red"]:
+        finalDecision = input("Once you cross the lake, you are met with 3 doors. Which door to choose: Red, Blue or Yellow?\n").lower()
+        if finalDecision == "red":
             print("An angry, giant Orc spots you and crushs you!")
-        elif finalDecision in ["Yellow", "yellow"]:
+        elif finalDecision == "yellow":
             print("You set off a trap and an explosion ends your treasure hunt.")
         else:
             print("Congratulations! You found the treasure!")
