@@ -23,7 +23,7 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
-decisionOne = input("Which direction do you choose? Left or Right.\n").lower()
+decisionOne = input("You come upon a crossroad. Which direction do you choose? Left or Right.\n").lower()
 if decisionOne == "right":
     print("You've activated a trap and spikes end your hunt early.")
 elif decisionOne == "left":
